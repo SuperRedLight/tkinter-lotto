@@ -5,9 +5,12 @@ import random
 # 1~46까지 랜덤으로 생성된 숫자를 lotto_num에 저장
 lotto_num = range(1, 46)
 
-# 버튼 옵션(버튼을 클릭하면 6자리수 난수를 생성)
+# 버튼 옵션
 def buttonClick() :
-    print(random.sample(lotto_num, 6))
+    # 버튼을 클릭하면 윈도우 창에 글자들이 직접 찍혀서 나온다.(6개의 난수가 나옴)
+    label = tkinter.Label(window, text = str(random.sample(lotto_num, 6)))
+    #버튼 아래에 숫자 생성
+    label.pack()
 
 # tkinter 윈도우 창을 생성한다.
 window = tkinter.Tk()
